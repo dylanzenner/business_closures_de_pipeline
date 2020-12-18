@@ -16,7 +16,7 @@ The project is housed in the AWS ecosystem and utilizes the following resources:
 
 **EC2:**
 
-- t2.micro - Resource used to SSH into the DocumentDB database, also initiates the SSM RunCommand to extract data from DocumentDB, load it into S3, and shut down the EC2 instance and DocumentDB cluster.
+- t2.micro - Resource used to SSH into the DocumentDB database, also initiates the SSM RunCommand to extract the transformed data from DocumentDB, load it into S3, and shut down the EC2 instance and DocumentDB cluster.
 
 **DocumentDB:**
 
