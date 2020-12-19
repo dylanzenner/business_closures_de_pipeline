@@ -37,4 +37,4 @@ I had a lot of fun building this project but I do have some things I would like 
   * I origionally wanted to do some querying with some of these Geospatial operators but, since DocumentDB does not support these operators I was to do that.
 - Another thing I origionally wanted to do was embed the QuickSight dashboard here in the ReadMe file. However, in order to do that I would need the Enterprise Edition of QuickSight and I would also be getting charged $0.30 per reader session. With a reader session counting as anyone who visits this page, I just was unable to spend that amount of money on this project. I wish I could've but perhaps I will look into other methods of visualization for my next project.
 - I used CloudWatch time-based events for automating the project. While I really liked the time-based events, I would like to use more CloudWatch event-based events to help cut down on costs and get some more experience with CloudWatch.
-- 
+- I used the Python module Black for code formatting. I do not like how it formatted my array in the file transform_data.py so perhaps I will look into other code formatting modules next time.
