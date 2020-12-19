@@ -23,3 +23,28 @@ Now, let's get started:
 - Leave the rest set as default and choose **Create VPC**
 
 # Stage 2: Setting Up DocumentDB
+Next, we will be setting up DocumentDB and an EC2 instance in order to SSH into DocumentDB. **Warning: This is the longest part of the project so once you finish I recommend taking a break to stretch or grab a cup of coffee**.
+
+## Step 1: Create a Subnet Group
+- Open the DocumentDB dashboard and click on **Subnet Groups**
+- Enter a name and description
+- Now add the VPC which you created in Stage 1
+- Choose the availability zone of your public subnet and then choose your subnet and click on **Add subnet** (repeat this process for your Private Subnet).
+- Select **create**
+
+## Step 2: Create a Parameter Group
+- In the DocumentDB dashboard, click on **Parameter Groups**
+- Enter a name for your group, select **docdb4.0** for the Family and give it a description and choose **create**
+
+## Step 3: Create a Cluster
+- In the DocumentDB dashboard choose **Clusters** and select **Create**
+- Select engine version **4.0.0**
+- Select Instance Class **db.t3.medium**
+- Select **1** for the number of instances (Normally you would select at least 3 instances if running production. But, for this we are trying to keep costs at a minimum).
+- Next fill in your authentication information and click on **Show Advanced Settings**.
+- Fill in the Network settings with the VPC information we created in Stage 1, the Subnet Group we just created and the default VPC security Group (We will change this later)
+- Scroll down a little to **Cluster Options** and make sure 27017 is filled in for the **Port** and the cluster parameter group we just made is selected.
+- You can leave the rest as default and hit **Create Cluster**
+
+## Step 4: Create an EC2 Instance
+
