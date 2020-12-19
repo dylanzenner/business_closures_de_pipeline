@@ -47,4 +47,74 @@ Next, we will be setting up DocumentDB and an EC2 instance in order to SSH into 
 - You can leave the rest as default and hit **Create Cluster**
 
 ## Step 4: Create an EC2 Instance
+- Open up the EC2 dashboard and select **Launch Instance**
+- Select **Amazon Linux 2 AMI (HVM), SSD Volume**
+- Select **t2.micro** and choose **Next: Configure Instance Details**
+- For Number of instances choose 1
+- Choose the VPC we created in Stage 1 for the **Network** option
+- Select the public subnet as the subnet
+- Make sure that **Auto-assign Public IP** is set to **Disable** (We will be associating an Elastic IP address to this instance. That way we can stop and start our instance without having to worry about losing our IP address).
+- Click on **Next: Add Storage**
+- The defaults here will suffice for what we are trying to accomplish.
+- Click **Next: Add Tags** and add tags if you'd like
+- Click **Next: Configure Security Group**
+- Make sure **Create a new security group** is selected and give it a name
+- Now, we will add the following rule:
 
+|Type|Protocol|Port Range|Source|Description|
+|----|--------|----------|------|-----------|
+|SSH|TCP|22|MY IP|Allows SSH Access from my IP|
+
+- Click on **Review and Launch**
+- Click on **Launch**
+- Choose the key pair you'd like to launch the instance with and click **Launch Instance**
+
+## Step 5: Associate an Elastic IP to your EC2 Instance you just launched
+- In your EC2 dashboard click on **Elastic IPs**
+- Click on **Allocate Elastic IP address**
+- Click **Allocate**
+- Now, select the EIP you just created and click on **Actions > Associate Elastic IP address**
+- Make sure the **Resource type** is **Instance**, select the instance we launched and its private IP address and select **Associate**
+
+## Step 6: SSH into the EC2 instance and install the MongoShell, Mongoexport tools, and the DocumentDB cluster certificate
+- In the EC2 dashboard, select **Instances**
+- Select the instance we set up earlier, click on **Connect** and follow the instructions
+- Once you are SSH'd into the EC2 instance run the following command:
+```
+wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+
+```
+This is the DocumentDB Certificate Authority (CA) certificate required to authenticate to your cluster.
+
+- Run the following command in your EC2 terminal to create a repository file:
+```
+echo -e "[mongodb-org-4.0] \nname=MongoDB Repository\nbaseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.0/x86_64/\ngpgcheck=1 \nenabled=1 \ngpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc" | sudo tee /etc/yum.repos.d/mongodb-org-4.0.repo
+
+```
+- Now, run the following command to install the MongoShell:
+```
+sudo yum install -y mongodb-org-shell
+
+```
+- Finally, we need to get the Mongoexport tools, so head over to:https://docs.mongodb.com/database-tools/installation/installation-linux/ and select the TGZ archive and follow the instructions.
+
+## Step 7: Configure Security Groups to allow access to the DocumentDB cluster
+- To allow our EC2 instance access to DocumentDB we will need to create a security group
+- Head over to the VPC dashboard and select **Security Groups**
+- Click **Create Security Group**
+- We will name our security group "DocumentDB" and give it a description
+- Now, we will add the following **Inbound Rule**: 
+
+|Type|Protocol|Port Range|Source|Description|
+|----|--------|----------|------|-----------|
+|Custom TCP|TCP|27017|The Security Group of our EC2 instance|Allows Access to DocumentDB|
+
+- Let's double check the **Outbound Security Group** for our EC2 instance and make sure it is as follows:
+
+|Type|Protocol|Port Range|Source|Description|
+|----|--------|----------|------|-----------|
+|Custom TCP|TCP|27017|The Security Group of our DocumentDB cluster|Allows Access to DocumentDB|
+
+- You now have SSH access to your DocumentDB cluster from your EC2 instance.
+
+We have just completed Stage 2 (Setting Up DocumentDB). I know it toook a while but now we are ready to dive in and build our Lambda Function and populate our Database with some data! When you are ready, move on to the next stage.
