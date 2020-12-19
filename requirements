@@ -1,0 +1,9 @@
+python==3.7.9
+urllib3==1.26.2
+boto3==1.16.29
+certifi==2020.11.8
+pymongo==3.7.2
+sodapy==2.1.0
+pytest==3.3.0
+pytest-mongodb==2.2.0
+
