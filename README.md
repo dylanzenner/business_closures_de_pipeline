@@ -27,6 +27,11 @@ The project is housed in the AWS ecosystem and utilizes the following resources:
 - db.t3.medium - Resource used for the primary instance of the database
 
 ## Dashboard:
+![](DashBoard1.png)
+![](DashBoard2.png)
+![](DashBoard3.png)
+![](DashBoard4.png)
+![](DashBoard5.png)
 
 ## Points moving forward
 
