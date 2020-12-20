@@ -7,7 +7,7 @@
 
 Tracking business closures in San Francisco across corridor, zipcode, neighborhood, and naic descriptions in the months following COVID-19. Completely hosted in the AWS ecosystem with a public facing dashboard built with Amazon Quicksight.
 
-**If you would like to replicate this project follow the walk_through.md file in the walk_through directory.**
+**If you would like to replicate this project follow the walk_through.md file in the docs directory.**
 
 ## Architecture:
 ![](architecture/architecture_diagram.png)
