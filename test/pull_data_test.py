@@ -4,7 +4,7 @@ import mongomock
 import pymongo
 import certifi
 import urllib3
-from pull_data import pull_socrata, check_connection
+from src.pull_data import pull_socrata, check_connection
 
 
 client = mongomock.MongoClient()
