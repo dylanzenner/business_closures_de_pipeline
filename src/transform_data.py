@@ -47,14 +47,18 @@ instanceId = secretDict3["SSM_instanceID"]
 # Make our connection to the DocumentDB cluster
 client = MongoClient(connection_string)
 
+
 # Specify which database to use
 db = client.de_project
+
 
 # Specify which collection to use
 col = db.businesses
 
+
 # specify the certificates to use
 http = urllib3.PoolManager(ca_certs=certifi.where())
+
 
 # Specify the variable for SSM
 SSM = boto3.client("ssm")
@@ -66,7 +70,6 @@ def transformations():
     into a new collection
     :return: None
     """ ""
-
     col.aggregate(
         [
             {
@@ -164,12 +167,9 @@ def run_command():
 def lambda_handler(event, context):
     """
     Handler for lambda, calls the transformations function and sends message to slack
-
-    :param event:
-    :param context:
-    :return:
     """
     transformations()
+    
     # Send a message to slack
     slack_url = slack_endpoint
     msg = {
