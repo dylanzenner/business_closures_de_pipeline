@@ -37,7 +37,7 @@ The project is housed in the AWS ecosystem and utilizes the following resources:
 - 1 for transforming the data, loading it to S3 and shutting down the services
 
 **Secrets Manager**
-- For storing Lambda variables
+- For storing connection variables
 
 **S3 Bucket with versioning enabled**
 - For storing the transformed data in JSON format
