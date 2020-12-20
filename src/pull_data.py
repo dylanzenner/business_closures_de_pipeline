@@ -17,6 +17,7 @@ response = DocDBclient.get_secret_value(
 )
 secretDict = json.loads(response["SecretString"])
 
+
 # This will be our MongoClient connection string
 connection_string = (
     "mongodb://"
@@ -49,16 +50,20 @@ API_Token = secretDict3["api_token"]
 # Make our connection to the DocumentDB cluster
 client = MongoClient(connection_string)
 
+
 # Specify the database to use
 db = client.de_project
+
 
 # Specify the collection to use
 col = db.businesses
 # Create an index
 col.create_index("ttxid", unique=True)
 
+
 # url to access
 url = "https://data.sfgov.org/"
+
 
 # specify the certificates to use
 http = urllib3.PoolManager(ca_certs=certifi.where())
@@ -67,7 +72,6 @@ http = urllib3.PoolManager(ca_certs=certifi.where())
 def check_connection():
     """
     Checks the connection status of the url to access
-
     :return: If the connection is available: "Successful Connection"
              If the connection is not available: "Connection Failed"
     """
@@ -83,10 +87,8 @@ def pull_socrata():
     Checks the connection to the API.
     If connection status code is 200: Pulls the data from the specified url and inserts each record into an array
     If connection status code is not 200: Prints out status code
-
     :return: An array of dictionaries
     """
-
     if check_connection() == "Successful Connection":
         with Socrata("data.sfgov.org", API_Token) as c:
             data = c.get_all("g8m3-pdis")
@@ -106,11 +108,9 @@ def insert_into_docdb(event, context):
     inserts it into a DocumentDB collection
     :return: None
     """
-
     pull_socrata()
 
     # Send a message to slack
-
     slack_url = slack_endpoint
     msg = {
         "channel": "DE-Project",
