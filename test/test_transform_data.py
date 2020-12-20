@@ -4,8 +4,8 @@ import mongomock
 import pymongo
 import certifi
 import urllib3
-from Function import pull_socrata, check_connection
-from Transform_data import transformations
+from pull_data import pull_socrata, check_connection
+from transform_data import transformations
 
 
 client = mongomock.MongoClient()
