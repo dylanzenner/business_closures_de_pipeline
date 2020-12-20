@@ -14,10 +14,13 @@ Tracking business closures in San Francisco across corridor, zipcode, neighborho
 
 Data is sourced from San Francisco's Open Data API (https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis) as JSON documents containing information on business closures throughout San Francisco. A series of Lambda functions orchestrate the data movement and transformations throughout the pipeline. The presentation layer is created using Amazon QuickSight.
 
-## ETL Flow:
-
 ## Infrastructure:
 The project is housed in the AWS ecosystem and utilizes the following resources:
+
+**VPC**
+- Custom built VPC with two subnets (1 private, 1 public)
+- IGW, NATGW and Route Tables
+- Security Groups
 
 **EC2:**
 
@@ -27,6 +30,19 @@ The project is housed in the AWS ecosystem and utilizes the following resources:
 
 - Engine version 4.0.0
 - db.t3.medium - Resource used for the primary instance of the database
+
+**3 Lambda Functions**
+- 1 for starting the EC2 instance and DocumentDB cluster
+- 1 for pulling data from the API and loading it into the DocumentDB cluster
+- 1 for transforming the data, loading it to S3 and shutting down the services
+
+**Secrets Manager**
+- For storing Lambda variables
+
+**S3 Bucket with versioning enabled**
+- For storing the transformed data in JSON format
+
+
 
 ## Dashboard:
 ![](dashboard_images/DashBoard1.png)
