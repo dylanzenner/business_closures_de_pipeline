@@ -71,9 +71,7 @@ http = urllib3.PoolManager(ca_certs=certifi.where())
 def check_connection():
     """
     Checks the connection status of the url to access
-    
-    :return: If the connection is available: "Successful Connection"
-             If the connection is not available: "Connection Failed"
+    :return: Either "Successful Connection" or "Connection Failed"
     """
     try:
         http.request("GET", url, retries=False)
