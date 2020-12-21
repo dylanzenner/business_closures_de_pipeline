@@ -18,8 +18,8 @@ http.request("GET", url, retries=False)
 
 
 def test_check_connection():
-    """
     
+    """
     Tests whether or not check_connection returns either 'Successful Connection'
     or 'Connection Failed'
     :return: True or False
