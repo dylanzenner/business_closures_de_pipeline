@@ -21,6 +21,7 @@ def test_check_connection():
     """
     Tests whether or not check_connection returns either 'Successful Connection'
     or 'Connection Failed'
+    :return: True or False
     """
     assert check_connection() in ["Successful Connection", "Connection Failed"]
 
@@ -29,7 +30,7 @@ def test_pull_socrata():
     """
     Tests that pull_socrata() inserts the data pulled from the API and returns an
     error only if the error code is not 11000
-    :return:
+    :return: True or False
     """
     if check_connection() == "Successful Connection":
         pull_socrata()
