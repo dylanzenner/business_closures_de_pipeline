@@ -70,7 +70,6 @@ def transformations():
     into a new collection
     :return: None
     """ ""
-    
     col.aggregate(
         [
             {
