@@ -45,6 +45,15 @@ The project is housed in the AWS ecosystem and utilizes the following resources:
 **S3 Bucket with versioning enabled:**
 -   For storing the transformed data in JSON format
 
+**SSM RunCommand:**
+-   For shutting down the services
+
+**CloudWatch Time-Based Events:**
+-   For automating the pipeline
+
+**Amazon Quicksight:**
+-   For the visualization layer
+
 ## Dashboard
 ![](dashboard_images/DashBoard1.png)
 ![](dashboard_images/DashBoard2.png)
