@@ -2,7 +2,6 @@ import urllib3
 import json
 import certifi
 import pymongo
-import sys
 from pymongo import MongoClient
 from sodapy import Socrata
 import boto3
