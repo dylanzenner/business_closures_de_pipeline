@@ -33,15 +33,15 @@ The project is housed in the AWS ecosystem and utilizes the following resources:
 -   Engine version 4.0.0
 - db.t3.medium: Resource used for the primary instance of the database
 
-**3 Lambda Functions**
+**3 Lambda Functions:**
 -   1 for starting the EC2 instance and DocumentDB cluster
 -   1 for pulling data from the API and loading it into the DocumentDB cluster
 -   1 for transforming the data, loading it to S3 and shutting down the services
 
-**Secrets Manager**
+**Secrets Manager:**
 -   For storing connection variables
 
-**S3 Bucket with versioning enabled**
+**S3 Bucket with versioning enabled:**
 -   For storing the transformed data in JSON format
 
 ## Dashboard
