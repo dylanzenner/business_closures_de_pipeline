@@ -59,7 +59,7 @@ I had a lot of fun building this project but I do have some things I would like 
 
 - This project is relatively expensive if you are not conscious about turning off the EC2 instance and the Database. I purposfully built a non-highly availble architecture in order to save on costs. Particularly the database, if I were to go with 3 instances for the database instead of 1 it would cost roughly $0.32 per hour instead of $0.08 per hour, that adds up fast if it were to be left on 24 hr. like it would be in a production setting. 
 - I am spending a little less than $10.00 a month, to keep this project running. Because, I built it with cost in mind
-- I am a little disappointed in the lack of support that DocumentDB has for MongoDB. Specifically, the fact that DocumentDB does not support either:
+-  I am a little disappointed in the lack of support that DocumentDB has for MongoDB. Specifically, the fact that DocumentDB does not support either:
   * **Geospatial Geometry Specifiers:** 
     * $box
     * $center
