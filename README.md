@@ -19,8 +19,8 @@ Data is sourced from San Francisco's Open Data API (https://data.sfgov.org/Econo
 ## Infrastructure
 The project is housed in the AWS ecosystem and utilizes the following resources:
 
-**VPC**
-- Custom built VPC with two subnets (1 private, 1 public)
+**VPC:**
+  - Custom built VPC with two subnets (1 private, 1 public)
   - IGW, NATGW and Route Tables
   - Security Groups
 
