@@ -3,7 +3,6 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dylanzenner/business_closures_de_pipeline)
 ![GitHub repo size](https://img.shields.io/github/repo-size/dylanzenner/business_closures_de_pipeline)
-![GitHub search hit counter](https://img.shields.io/github/search/dylanzenner/business_closures_de_pipeline/hits)
 
 # SF-Business Closures DE Pipeline
 
