@@ -13,7 +13,7 @@ Tracking business closures in San Francisco across corridor, zipcode, neighborho
 *Currently going through the process of finalizing the walk through*
 
 ## Architecture
-![](architecture/architecture_diagram.png)
+![](architecture/Final_DE_Project_Architecture_Diagram.png)
 
 Data is sourced from San Francisco's Open Data API (https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis) as JSON documents containing information on business closures throughout San Francisco. A series of Lambda functions orchestrate the data movement and transformations throughout the pipeline. The presentation layer is created using Amazon QuickSight.
 
