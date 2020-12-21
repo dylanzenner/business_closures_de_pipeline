@@ -20,7 +20,7 @@ http.request("GET", url, retries=False)
 def test_check_connection():
     """
     Tests check_connection for a return of 'Successful Connection' or 'Connection Failed'
-    
+
     :return: True or False
     """
     assert check_connection() in ["Successful Connection", "Connection Failed"]
