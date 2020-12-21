@@ -65,7 +65,7 @@ def lambda_handler(event, context):
     msg = {
         "channel": "DE-Project",
         "username": "webhook-username",
-        "text": "Hello, from AWS Lambda! I am an SNS notification letting you know \
+        "text": "Hello, from AWS Lambda! I am a notification letting you know \
          that your Lambda function has successfully started your services.",
         "icon_emoji": "",
     }
