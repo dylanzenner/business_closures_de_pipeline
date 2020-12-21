@@ -59,25 +59,28 @@ I had a lot of fun building this project but I do have some things I would like 
 - I am spending a little less than $10.00 a month, to keep this project running. Because, I built it with cost in mind
 - I am a little disappointed in the lack of support that DocumentDB has for MongoDB. Specifically, the fact that DocumentDB does not support either:
   * **Geospatial Geometry Specifiers:** 
-    * $box
-    *  $center
+    - $box
+    -  $center
     -  $centerSphere
     - $nearSphere
     - $geometry
-    * $maxDistance
+    - $maxDistance
     - $minDistance
-    * $polygon
+    - $polygon
     - $uniqueDocs
     
   * **Geospatial Query Selectors:** 
     - $geoIntersects
     - $geoWithin
-    * $near
-    * $nearSphere
-    * $polygon
+    - $near
+    - $nearSphere
+    - $polygon
     - $uniqueDocs
     
 - I origionally wanted to do some querying with some of these Geospatial operators but, since DocumentDB does not support these operators, I was unable to do that.
+
 - Another thing I origionally wanted to do was embed the QuickSight dashboard here in the ReadMe file. However, in order to do that I would need the Enterprise Edition of QuickSight and I would also be getting charged $0.30 per reader session. With a reader session counting as anyone who visits this page, I just was unable to spend that amount of money on this project. I wish I could've but perhaps I will look into other methods of visualization for my next project.
+
 - I used CloudWatch time-based events for automating the project. While I really liked the time-based events, I would like to use more CloudWatch event-based events to help cut down on costs and get some more experience with CloudWatch.
+
 - I had never worked with unit tests before this project but I really wanted to go all out and make this the best that I possibly could so I integrated some unit tests in order to touch on the subject. While they may not be the greatest unit tests, I belive that they are a start in the right direction. I would like to read up more on the subject before I start my next project. 
