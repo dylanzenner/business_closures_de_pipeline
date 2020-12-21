@@ -70,8 +70,8 @@ I had a lot of fun building this project but I do have some things I would like 
     - $minDistance
     * $polygon
     - $uniqueDocs
-  -  **Geospatial Query Selectors:** 
-    *  $geoIntersects
+  * **Geospatial Query Selectors:** 
+    * $geoIntersects
     * $geoWithin
     * $near
     * $nearSphere
