@@ -70,6 +70,7 @@ def transformations():
     into a new collection
     :return: None
     """ ""
+    
     col.aggregate(
         [
             {
@@ -169,7 +170,6 @@ def lambda_handler(event, context):
     Handler for lambda, calls the transformations function and sends message to slack
     """
     transformations()
-    
     # Send a message to slack
     slack_url = slack_endpoint
     msg = {
