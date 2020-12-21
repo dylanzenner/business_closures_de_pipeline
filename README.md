@@ -1,8 +1,9 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c26d843180fd4296a9f1be9764d81f9b)](https://app.codacy.com/gh/zennerdylan/business_closures_de_pipeline?utm_source=github.com&utm_medium=referral&utm_content=zennerdylan/business_closures_de_pipeline&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c26d843180fd4296a9f1be9764d81f9b)](https://app.codacy.com/gh/dylanzenner/business_closures_de_pipeline?utm_source=github.com&utm_medium=referral&utm_content=dylanzenner/business_closures_de_pipeline&utm_campaign=Badge_Grade)
 [![Python 3.6](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-![GitHub last commit](https://img.shields.io/github/last-commit/zennerdylan/business_closures_de_pipeline)
-![GitHub repo size](https://img.shields.io/github/repo-size/zennerdylan/business_closures_de_pipeline)
+![GitHub last commit](https://img.shields.io/github/last-commit/dylanzenner/business_closures_de_pipeline)
+![GitHub repo size](https://img.shields.io/github/repo-size/dylanzenner/business_closures_de_pipeline)
+![GitHub search hit counter](https://img.shields.io/github/search/dylanzenner/business_closures_de_pipeline/hits)
 
 # SF-Business Closures DE Pipeline
 
