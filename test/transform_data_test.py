@@ -34,7 +34,7 @@ def test_transformations_keys():
 
 def test_transformations():
     """
-    Tests that every item returned by the transformation stage either has the key 
+    Tests that every item returned by the transformation stage either has the key
     'state' equal to 'CA' or the key 'business_zip' is in the array of zips
     """
     for i in transformations():
