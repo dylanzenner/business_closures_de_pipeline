@@ -8,9 +8,11 @@
 
 Tracking business closures in San Francisco across corridor, zipcode, neighborhood, and naic descriptions in the months following COVID-19. Completely hosted in the AWS ecosystem including a dashboard built with Amazon Quicksight.
 
-**If you would like to replicate this project follow the walk_through.md file in the docs directory.**
+~~**If you would like to replicate this project follow the walk_through.md file in the docs directory.**~~
 
-*Currently going through the process of finalizing the walk through*
+~~*Currently going through the process of finalizing the walk through*~~
+
+After completing the walkthrough and going through it to double check everything I've decided to just write up a CloudFormation template for deployment. The walkthrough file did not turn out the way I had envisioned it to be. It was very dense and could be boring if people were to try and follow along. I'll do my best to get that CF template up as soon as possible.
 
 ## Architecture
 ![](architecture/Final_DE_Project_Architecture_Diagram.png)
